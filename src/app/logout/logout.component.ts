@@ -9,6 +9,8 @@ import { AuthenticationService } from '../service/authentication.service';
 
 
 
+
+
 export class LogoutComponent implements OnInit {
 
   constructor(private authenticationservice:AuthenticationService) { }

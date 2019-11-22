@@ -14,8 +14,8 @@ name = "";
   constructor(private route : ActivatedRoute)  {}
   ngOnInit() {
 
-    this.name =this.route.snapshot.params['name'];
-    console.log(this.name);
+   // this.name =this.route.snapshot.params['name'];
+    //console.log(this.name);
   }
 
   

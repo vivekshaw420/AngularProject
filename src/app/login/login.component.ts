@@ -21,6 +21,11 @@ constructor(private router: Router,
   private authenticationService: AuthenticationService) { }
 
 ngOnInit() {
+
+   if(sessionStorage.getItem("username"))
+   {
+      this.router.navigate(['welcome']);   
+   }
 }
 
 handleLogin() {
@@ -29,7 +34,8 @@ handleLogin() {
   if(this.authenticationService.authenticate(this.username, this.password)) {
     //Redirect to Welcome Page
     console.log("call welcome");
-    this.router.navigate(['welcome', this.username])
+    this.router.navigate(['welcome'])
+    this.router.navigateByUrl
     this.invalidLogin = false
   } else {
     this.invalidLogin = true

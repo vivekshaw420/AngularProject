@@ -6,14 +6,19 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { RootGuardService } from './service/root-guard.service';
 import { ErrorComponent } from './error/error.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ListTodoComponent } from './list-todo/list-todo.component';
 
 // include all the routes here for component 
 const routes: Routes = [
+
 { path: '', component: LoginComponent  },
 {path : 'login', component :LoginComponent},
-{path : "welcome/:name" , component : WelcomeComponent , canActivate:[RootGuardService]},
+//{path : "welcome/:name" , component : WelcomeComponent , canActivate:[RootGuardService]},
+{path : "welcome" , component : WelcomeComponent , canActivate:[RootGuardService]},
 {path:"logout" , component : LogoutComponent, canActivate:[RootGuardService]},
+{path: "todos" ,  component: ListTodoComponent , canActivate :[RootGuardService]},
 {path :  "**" , component : ErrorComponent}
+
 ];
 
 @NgModule({

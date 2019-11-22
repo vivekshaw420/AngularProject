@@ -5,7 +5,7 @@
     
             <ul class="navbar-nav">
                 <li><a *ngIf="authenticationService.isLogedIn()" routerLink="/welcome/vivek" class="nav-link">Home</a></li>
-                <li><a  *ngIf="authenticationService.isLogedIn()" class="nav-link">Todos</a></li>
+                <li><a  *ngIf="authenticationService.isLogedIn()"   routerLink="/todos"   class="nav-link">Todos</a></li>
             </ul>
     
             <ul class="navbar-nav navbar-collapse justify-content-end">

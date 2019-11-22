@@ -14,11 +14,12 @@ export class RootGuardService implements CanActivate {
   {
      if(this.authenticationService.isLogedIn())
      {
-       console.log("");
+       //console.log("");
        return true;
          
-     }
-     console.log("guard");
+     }  
+       
+     //console.log("guard");
      this.router.navigate(["login"])
     //throw new Error("Method not implemented.");
     return false;
